@@ -1,0 +1,159 @@
+html, body {
+  margin: 0;
+  background-color: #09111d;
+  
+}
+body{
+  margin: 0;
+  background-color: #09111d;
+}
+
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centra vertical */
+  align-items: center;       /* centra horizontal */
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+
+
+
+
+
+
+
+
+
+.read-the-docs {
+  color: #888;
+}
+.game-header{
+ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+background: rgba(228, 234, 233, 0.1);
+  border-radius: 20px;
+  font-size: 0.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* brillo borde */
+  max-height: 300px;
+ 
+
+}
+
+.stats{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:20px;
+}
+
+.stat-item{
+display: flex;
+flex-direction: column;
+}
+
+.stat-label{
+color:rgb(188, 187, 187);
+font-weight: bold;
+font-size: 0.9rem;
+font-family: monospace;
+}
+
+.stat-value
+{
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+#score{
+  color: rgb(29, 125, 65);
+}
+#play{
+  color: rgb(43, 150, 226);
+}
+
+.cards-grid{
+  margin-top: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 0.5fr);
+  gap: 10px;
+ width: 90vw;
+  max-width: 400px;
+  
+}
+
+.card{
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background: rgba(200, 203, 237, 0.1); 
+  border-radius: 10px;
+  font-size: 0.5rem;
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(62, 184, 197, 0.2); 
+  perspective: 1000px;
+/* brillo borde */
+position: relative;
+}
+.card > div{
+width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+   backface-visibility: hidden; 
+}
+
+.card-back{
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+    transform: rotateY(180deg); /* Empieza girada */
+
+}
+.card-back:hover{
+   transform: scale(1.2);
+}
+
+.card.flipped .card-front{
+opacity: 0;              
+  pointer-events: none;     
+  transform: rotateY(180deg) scale(0.9); 
+  backface-visibility: hidden;
+
+}
+
+.card.flipped .card-back{
+  opacity: 1;
+    transform: rotateY(0deg); 
+}
+.card.matched {
+pointer-events: none;
+}
+.card-front{
+
+}
